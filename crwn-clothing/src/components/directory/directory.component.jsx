@@ -49,7 +49,10 @@ class Directory extends React.Component {
       <div className='directory-menu'>
         {/*notice here that here we use desctructure to get the prop items out usually you probably just use section as the prop holder */}
 
-        {/*.map(({title, id, imageUrl, size}) => (<MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>))} */}
+        {/*.map(({title, id, imageUrl, size, history, linkUrl, match}) => (<MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>))} 
+      
+        if the name of the variables we are passing in are the same as the prop name you can do 
+      */}
 
         {this.state.sections.map(({ id, ...otherSectionProps }) => (
           <MenuItem key={id} {...otherSectionProps} />
